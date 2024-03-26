@@ -1,0 +1,125 @@
+digraph G {
+  // Graph settings
+  label="Hormone and Neurotransmitter Interactions";
+  labelloc="t";
+  fontsize=20;
+  rankdir=LR;
+
+  // Nodes
+  Cortisol [shape=circle];
+  Adrenaline [shape=circle];
+  Prolactin [shape=circle];
+  Serotonin [shape=circle];
+  Dopamine [shape=circle];
+  Oxytocin [shape=circle];
+  Melatonin [shape=circle];
+  Testosterone [shape=circle];
+  Estrogen [shape=circle];
+  Progesterone [shape=circle];
+
+  Sunlight [shape=rectangle, style=filled, color=orange];
+  Exercise [shape=rectangle, style=filled, color=green];
+  Cannabis [shape=rectangle, style=filled, color=purple];
+  Alcohol [shape=rectangle, style=filled, color=red];
+  Orgasm [shape=rectangle, style=filled, color=pink];
+  Sleep [shape=rectangle, style=filled, color=blue];
+
+  // Edges
+  Cortisol -> Oxytocin [color=red];
+  Cortisol -> Melatonin [color=red];
+  Cortisol -> Serotonin [color=red];
+  Cortisol -> Dopamine [color=red];
+  Cortisol -> Testosterone [color=red];
+  Cortisol -> Estrogen [color=red];
+  Cortisol -> Progesterone [color=red];
+
+  Adrenaline -> Cortisol [color=green];
+  Adrenaline -> Oxytocin [color=red];
+  Adrenaline -> Melatonin [color=red];
+  Adrenaline -> Testosterone [color=red];
+  Adrenaline -> Estrogen [color=red];
+  Adrenaline -> Progesterone [color=red];
+
+  Prolactin -> Dopamine [color=green, style=dashed];
+  Prolactin -> Dopamine [color=red];
+  Prolactin -> Testosterone [color=red];
+  Prolactin -> Estrogen [color=red];
+  Prolactin -> Progesterone [color=red];
+
+  Serotonin -> Prolactin [color=green];
+  Serotonin -> Oxytocin [color=green];
+  Serotonin -> Melatonin [color=green];
+  Serotonin -> Dopamine [color=red, style=dashed];
+
+  Dopamine -> Serotonin [color=green, style=dashed];
+  Dopamine -> Prolactin [color=red];
+  Dopamine -> Testosterone [color=green];
+  Dopamine -> Estrogen [color=green];
+  Dopamine -> Progesterone [color=green];
+
+  Oxytocin -> Dopamine [color=green];
+  Oxytocin -> Serotonin [color=green];
+  Oxytocin -> Melatonin [color=green];
+  Oxytocin -> Cortisol [color=red];
+  Oxytocin -> Testosterone [color=red];
+  Oxytocin -> Estrogen [color=green];
+  Oxytocin -> Progesterone [color=green];
+
+  Melatonin -> Oxytocin [color=green];
+  Melatonin -> Serotonin [color=green];
+  Melatonin -> Dopamine [color=red, style=dashed];
+  Melatonin -> Cortisol [color=red];
+
+  Testosterone -> Dopamine [color=green];
+  Testosterone -> Serotonin [color=green, style=dashed];
+  Testosterone -> Prolactin [color=red];
+  Testosterone -> Estrogen [color=red];
+  Testosterone -> Progesterone [color=red];
+
+  Estrogen -> Oxytocin [color=green];
+  Estrogen -> Serotonin [color=green];
+  Estrogen -> Dopamine [color=green, style=dashed];
+  Estrogen -> Progesterone [color=green];
+  Estrogen -> Testosterone [color=red];
+
+  Progesterone -> Oxytocin [color=green];
+  Progesterone -> Melatonin [color=green];
+  Progesterone -> Estrogen [color=red];
+  Progesterone -> Testosterone [color=red];
+
+  Sunlight -> Serotonin [color=green];
+  Sunlight -> Melatonin [color=red];
+  Sunlight -> Dopamine [color=green];
+  Sunlight -> Cortisol [color=green, style=dashed];
+  Sunlight -> Testosterone [color=green, style=dashed];
+
+  Exercise -> Dopamine [color=green];
+  Exercise -> Serotonin [color=green];
+  Exercise -> Testosterone [color=green];
+  Exercise -> Cortisol [color=green, style=dashed];
+  Exercise -> Estrogen [color=green, style=dashed];
+
+  Cannabis -> Dopamine [color=green];
+  Cannabis -> Prolactin [color=green];
+  Cannabis -> Cortisol [color=red, style=dashed];
+  Cannabis -> Testosterone [color=red, style=dashed];
+
+  Alcohol -> Dopamine [color=green, style=dashed];
+  Alcohol -> Serotonin [color=green, style=dashed];
+  Alcohol -> Prolactin [color=green];
+  Alcohol -> Testosterone [color=red];
+  Alcohol -> Estrogen [color=red];
+
+  Orgasm -> Dopamine [color=green];
+  Orgasm -> Prolactin [color=green];
+  Orgasm -> Oxytocin [color=green];
+  Orgasm -> Testosterone [color=green, style=dashed];
+
+  Sleep -> Melatonin [color=green];
+  Sleep -> Cortisol [color=red];
+  Sleep -> Dopamine [color=green];
+  Sleep -> Serotonin [color=green];
+  Sleep -> Testosterone [color=green];
+  Sleep -> Estrogen [color=green];
+  Sleep -> Progesterone [color=green];
+}
